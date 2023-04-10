@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  position: relative;
+  font-family: "Inter", sans-serif;
+  background: rgba(254, 253, 249, 255);
+}
+
+ 
+img {
+  display: block;
+}
+
+ul,
+ol,
+li {
+  padding: 0;
+  margin: 0;
+}
+
+header,
+.post {
+  display: flex;
+  flex-direction: row;
+}
+
+.feature,
+.feature section,
+.feature section section,
+.new,
+.new-posts,
+.new-posts section,
+.posts,
+.post-data {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  padding-top: 5.7rem;
+  padding-bottom: 1.4rem;
+  position: relative;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.9rem;
+  padding: 1rem;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 2.36rem;
+}
+nav {
+  position: relative;
+}
+
+nav ul li,
+nav ul li a{
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: hsl(236, 13%, 42%);
+}
+
+.feature {
+  gap: 2.1rem;
+  max-width: 45.6rem;
+  margin: 0 auto;
+}
+.feature img {
+  max-height: 18.8rem;
+  object-fit: cover;
+  object-position: top;
+}
+.feature section {
+  gap: 1.9rem;
+}
+
+.feature section p {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  color: hsl(236, 13%, 42%);
+}
+.feature section section {
+  gap: 3rem;
+}
+.feature h2 {
+  font-weight: 800;
+  font-size: 3.5rem;
+  line-height: 3.5rem;
+}
+
+.new {
+  gap: 1.2rem;
+  background-color: hsl(240, 100%, 5%);
+  padding: 1.45rem;
+}
+.new-posts,
+.new-posts section {
+  gap: 2rem;
+}
+.new h2 {
+  color: hsl(35, 77%, 62%);
+  font-size: 2.5rem;
+}
+.new-posts {
+  gap: 1.8rem;
+}
+.new-posts section {
+  gap: 0.5rem;
+}
+
+.new-posts section h3 {
+  text-decoration: none;
+  color: hsl(36, 100%, 99%);
+  font-weight: 700;
+  font-size: 1.1rem;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+}
+
+.new-posts section p {
+  color: hsl(233, 8%, 79%);
+  word-spacing: 1px;
+  line-height: 1.6rem;
+}
+.new-posts hr {
+  height: 1px;
+  background-color: hsl(233, 8%, 79%);
+  border: none;
+  opacity: 0.5;
+}
+
+.posts {
+  gap: 1rem;
+  margin-bottom: 4rem;
+  justify-content: space-between;
+}
+.post {
+  align-items: top;
+  gap: 1.4rem;
+  max-width: 21.5rem;
+  min-height: 7rem;
+  max-height: 8rem;
+  height: 8rem;
+}
+.post-data {
+  gap: 1rem;
+  line-height: 1.3rem;
+  padding-top: 8px;
+}
+.post img {
+  max-width: 100%;
+}
+.post h2 {
+  color: hsl(233, 8%, 79%);
+  font-size: 2rem;
+  font-weight: 700;
+}
+.post h3 {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: hsl(240, 100%, 5%);
+}
+.post p {
+  color: hsl(236, 13%, 42%);
+}
+
+
+
+@media (min-width: 1140px) {
+  .featured {
+    grid-area: one;
+  }
+  .new {
+    grid-area: two;
+  }
+  .posts {
+    grid-area: three;
+  }
+  main {
+    row-gap: 4.5rem;
+    grid-template-columns: 45.6rem 1fr;
+    grid-template-areas:
+      "one two"
+      "three three";
+  }
+  .posts {
+    flex-direction: row;
+  }
+}
